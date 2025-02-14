@@ -124,7 +124,7 @@ const server = createServer(async (req, res) =>{
     }
 })
 
-const PORT = 3000
-server.listen(PORT, () => {
-    console.log(`Your server URL is http://localhost:${PORT}`)
-})
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, "0.0.0.0", () => {
+    console.log(`Your server URL is http://localhost:${PORT}`);
+});
